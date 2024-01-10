@@ -1,18 +1,14 @@
 @main
 def main(): Unit = {
-  val condition = true
 
-  val result1 = if1(condition, () => 12, () => 456)
-  val result2 = if2(condition, 13, "1324566")
-
-  println(result1)
-  println(result2)
 }
 
-def square(x: Double): Double = x * x
+type B[X] = X => X => X
+def TRUE[X]: B[X] = a => b => a
+def FALSE[X]: B[X] = a => b => b
+def ifThenElse[X](b: B[X], thenResult: X, elseResult: X): X =
+  b(thenResult)(elseResult)
 
-def if1[A](cond: Boolean, onTrue: () => A, onFalse: () => A): A =
-  if cond then onTrue() else onFalse()
-
-def if2[A](cond: Boolean, onTrue: => A, onFalse: => A): A =
-  if (cond) onTrue else onFalse
+def and[X](a: B[B[X]], b: B[X]): B[X] = a(b)(FALSE)
+def or[X](a: B[B[X]], b: B[X]): B[X] = a(TRUE)(b)
+def not[X](a: B[B[X]]): B[X] = a(FALSE)(TRUE)
