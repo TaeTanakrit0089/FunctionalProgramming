@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FunctionalProgramming.iml" filepath="$PROJECT_DIR$/.idea/modules/FunctionalProgramming.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FunctionalProgramming-build.iml" filepath="$PROJECT_DIR$/.idea/modules/FunctionalProgramming-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/project.FunctionalProgramming-build.iml" filepath="$PROJECT_DIR$/.idea/modules/project.FunctionalProgramming-build.iml" />
     </modules>
   </component>
 </project>
