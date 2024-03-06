@@ -5,11 +5,6 @@ object Recursion {
     processCollectionThree(List(1, 4, 5, 7, 8))
   }
 
-  def processOne[A](collection: List[A]): List[A] =
-    collection match
-      case _ :: t => t
-      case Nil => throw new Exception("EmptyList")
-
   def processCollection[A](collection: List[A]): Unit =
     while collection.nonEmpty do
       println(processOne(collection))
@@ -19,6 +14,11 @@ object Recursion {
     while remaining.nonEmpty do
       println(remaining)
       remaining = processOne(remaining)
+
+  def processOne[A](collection: List[A]): List[A] =
+    collection match
+      case _ :: t => t
+      case Nil => throw new Exception("EmptyList")
 
   def processCollectionThree[A](collection: List[A]): Unit =
     println(collection)
