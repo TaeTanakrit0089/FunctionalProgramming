@@ -1,3 +1,5 @@
+package Chap1
+
 object Lab3_2 {
   def main(args: Array[String]): Unit = {
     number1()

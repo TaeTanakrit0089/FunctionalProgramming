@@ -1,3 +1,5 @@
+package Chap1
+
 import scala.collection.parallel.immutable.ParVector
 import scala.collection.parallel.mutable._
 
