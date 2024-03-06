@@ -1,6 +1,5 @@
-package Chap2
+package M3_1
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.{Future, Promise}
 
 object Slow {

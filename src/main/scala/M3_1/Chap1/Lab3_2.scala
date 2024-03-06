@@ -1,4 +1,4 @@
-package Chap1
+package M3_1.Chap1
 
 object Lab3_2 {
   def main(args: Array[String]): Unit = {
