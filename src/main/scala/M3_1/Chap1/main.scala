@@ -10,10 +10,10 @@ object main {
   }
 
   def sideEffect2(): Unit = {
-    val strings = List("abc","def","ghi","jk","lmnop","qrs","tuv","wx","yz").par
+    val strings = List("abc", "def", "ghi", "jk", "lmnop", "qrs", "tuv", "wx", "yz").par
     println(strings)
 
-    val alphabet = strings.reduce(_+_)
+    val alphabet = strings.reduce(_ + _)
     println(alphabet)
 
   }

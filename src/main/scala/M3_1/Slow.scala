@@ -9,6 +9,26 @@ object Slow {
     Print_two()
   }
 
+  def Print_one(): Unit = {
+    println('A')
+    Future(println('B'))
+    println('C')
+  }
+
+  def Print_two(): Unit = {
+    slowPrint('A')
+    Future(slowPrint('B'))
+    slowPrint('C')
+  }
+
+  def slowPrint(x: Any) = {
+    var n = BigInt("100000000")
+    while (n > 0) {
+      n -= 1
+    }
+    println(x)
+  }
+
   def calculate_d(input: Int): Future[Int] = Future {
     Thread.sleep(10000)
     input * input
@@ -21,25 +41,5 @@ object Slow {
       promise.success(input * input)
     }
     promise
-  }
-
-  def Print_one(): Unit = {
-    println('A')
-    Future(println('B'))
-    println('C')
-  }
-
-  def slowPrint(x: Any) = {
-    var n = BigInt("100000000")
-    while (n > 0) {
-      n -= 1
-    }
-    println(x)
-  }
-
-  def Print_two(): Unit = {
-    slowPrint('A')
-    Future(slowPrint('B'))
-    slowPrint('C')
   }
 }

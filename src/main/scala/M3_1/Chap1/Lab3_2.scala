@@ -47,8 +47,8 @@ object Lab3_2 {
       case _ => Nil
     }
 
-//    println(traverse(small))
-//    println(traverse(output))
+    //    println(traverse(small))
+    //    println(traverse(output))
     println(traverse(data))
 
 
