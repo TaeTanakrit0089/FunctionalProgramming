@@ -23,5 +23,6 @@ object Scala1_Normal extends App {
     val files = d.listFiles.filter(_.isFile).toList.filter(_.getName.endsWith(".csv"))
     files
   }
+
   println(duration)
 }

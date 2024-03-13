@@ -30,6 +30,7 @@ object Scala2_Future extends App {
     }
     f.close
   }
+
   println(duration)
-  Thread.sleep(25000)
+  //  Thread.sleep(25000)
 }

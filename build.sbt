@@ -10,3 +10,10 @@ lazy val root = (project in file("."))
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
 libraryDependencies += """|com.lihaoyi""".stripMargin %% "os-lib" % "0.9.3"
 libraryDependencies += "com.lihaoyi" %% "upickle" % "3.2.0"
+
+libraryDependencies ++= Seq(
+  "org.scalameta" %% "munit" % "0.7.29" % Test,
+  "org.apache.spark" %% "spark-core" % "3.5.0",
+  "org.apache.spark" %% "spark-sql" % "3.5.0" % "provided"
+)
+
