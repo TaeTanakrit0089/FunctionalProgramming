@@ -12,3 +12,9 @@ libraryDependencies ++= Seq(
   "org.scalameta" %% "munit" % "0.7.29" % Test,
   "com.lihaoyi" %% "os-lib" % "0.9.3"
 )
+
+libraryDependencies ++= Seq(
+  "net.ruippeixotog" %% "scala-scraper" % "3.0.0",
+  "org.scalameta" %% "munit" % "0.7.29" % Test,
+  "com.github.tototoshi" %% "scala-csv" % "1.3.10"
+)
