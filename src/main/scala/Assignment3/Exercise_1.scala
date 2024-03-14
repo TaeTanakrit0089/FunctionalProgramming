@@ -1,14 +1,11 @@
 package Assignment3
 
-import com.github.tototoshi.csv._
+import com.github.tototoshi.csv.*
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
-import net.ruippeixotog.scalascraper.dsl.DSL._
-import net.ruippeixotog.scalascraper.dsl.DSL.Extract._
-import net.ruippeixotog.scalascraper.dsl.DSL.Parse._
-import org.jsoup.Jsoup
+import net.ruippeixotog.scalascraper.dsl.DSL.*
+import net.ruippeixotog.scalascraper.dsl.DSL.Extract.*
 
 import java.io.File
-import scala.collection.JavaConverters._
 
 case class Product(name: String, url: String, image: String, price: String)
 

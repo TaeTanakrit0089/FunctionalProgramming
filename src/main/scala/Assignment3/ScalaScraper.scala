@@ -2,7 +2,6 @@ import com.github.tototoshi.csv.*
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
 import net.ruippeixotog.scalascraper.dsl.DSL.*
 import net.ruippeixotog.scalascraper.dsl.DSL.Extract.*
-import net.ruippeixotog.scalascraper.dsl.DSL.Parse.*
 
 import java.io.File
 

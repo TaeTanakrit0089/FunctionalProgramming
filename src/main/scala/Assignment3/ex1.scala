@@ -3,9 +3,9 @@ import org.jsoup.Jsoup
 import scala.collection.JavaConverters.*
 
 @main def hello(): Unit =
-//  val doc = Jsoup.connect("https://en.wikipedia.org/wiki/Main_Page").get()
+  //  val doc = Jsoup.connect("https://en.wikipedia.org/wiki/Main_Page").get()
   val doc = Jsoup.parse(os.read(os.pwd / "Lobsters.html"))
-//  println(os.pwd)
+  //  println(os.pwd)
   //val doc = Jsoup.connect("https://developer.mozilla.org/en-US/docs/web/api").get()
   println(doc.title)
 
