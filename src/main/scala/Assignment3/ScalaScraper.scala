@@ -16,7 +16,7 @@ object ScalaScraper {
     // download the target page
     val doc = browser.get("https://scrapeme.live/shop/")
     println(doc)
-//    return
+    //    return
 
     // get the first HTML product on the page
     val htmlProductElements = doc >> elementList("li.product")
