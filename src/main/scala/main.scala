@@ -1,19 +1,18 @@
-type B[X] = X => X => X
+import org.jsoup.Jsoup
 
-@main
-def main(): Unit = {
+import scala.collection.JavaConverters.*
 
-}
+@main def hello(): Unit =
+  val doc = Jsoup.connect("https://en.wikipedia.org/wiki/Main_Page").get()
+  //val doc = Jsoup.parse(os.read(os.pwd / "Wikipedia.html"))
+  //val doc = Jsoup.connect("https://developer.mozilla.org/en-US/docs/web/api").get()
+  println(doc.title)
 
-def ifThenElse[X](b: B[X], thenResult: X, elseResult: X): X =
-  b(thenResult)(elseResult)
-
-def and[X](a: B[B[X]], b: B[X]): B[X] = a(b)(FALSE)
-
-def FALSE[X]: B[X] = a => b => b
-
-def or[X](a: B[B[X]], b: B[X]): B[X] = a(TRUE)(b)
-
-def TRUE[X]: B[X] = a => b => a
-
-def not[X](a: B[B[X]]): B[X] = a(FALSE)(TRUE)
+  val headline = doc.select("#mp-itn b a").asScala
+  //println(headline)
+  //val links = doc.select("h2#specifications").nextAll.select("div.index a").asScala
+  //val linkData = links.map(l => (l.attr("href"),l.attr("title"),l.text) )
+  //println(linkData)
+  //for (h <- headline) yield println(h.text)
+  for (h <- headline) yield println(h.attr("href"))
+//for (h <- headline) yield println(h.attr("title"))
