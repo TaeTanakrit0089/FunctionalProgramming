@@ -29,6 +29,7 @@ object Exercise_1 {
       val image = (htmlProductElement >> element("img")).attr("src")
       val timestamp = htmlProductElement >> text("span")
 
+      println(name + ", " + image + ", " + timestamp)
       // return a new Product instance
       Result(name, image, timestamp)
     })
