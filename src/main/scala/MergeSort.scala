@@ -3,7 +3,7 @@ object MergeSort {
   import scala.annotation.tailrec
 
   def main(args: Array[String]): Unit = {
-    println(mergeSort(List(1234, 565, 234, 5345, 31, 4, 25, 34, 53, 45, 4, 645, 6, 2, 34234, 235, 53, 45, 34, 5)))
+    println(mergeSort(List(1234, 565, 234, 5345, 31, 4, 25, 34, 53, 45, 4, 645, 6, 2, 34234, 235, 53, 45, 34, 5, 1)))
   }
 
   private def mergeSort(list: List[Int]): List[Int] = {
