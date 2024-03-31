@@ -1,7 +1,5 @@
 object MergeSort {
 
-  import scala.annotation.tailrec
-
   def main(args: Array[String]): Unit = {
     println(mergeSort(List(1234, 565, 234, 5345, 31, 4, 25, 34, 53, 45, 4, 645, 6, 2, 34234, 235, 53, 45, 34, 5, 1)))
   }
@@ -15,7 +13,7 @@ object MergeSort {
     }
   }
 
-  @tailrec
+  @scala.annotation.tailrec
   private def merge(seq1: List[Int], seq2: List[Int], accumulator: List[Int] = List()): List[Int] =
     (seq1, seq2) match {
       case (Nil, _) => accumulator ++ seq2
